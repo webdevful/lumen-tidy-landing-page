@@ -9,6 +9,12 @@ Verdict: PASS
 
 | Route | Breakpoint | Source/Baseline | Output/Current |
 |---|---|---|---|
+| category | desktop | `screenshots/source/category-desktop-source.png` | `screenshots/output/category-desktop-output.png` |
+| category | tablet | `screenshots/source/category-tablet-source.png` | `screenshots/output/category-tablet-output.png` |
+| category | mobile | `screenshots/source/category-mobile-source.png` | `screenshots/output/category-mobile-output.png` |
+| detail | desktop | `screenshots/source/detail-desktop-source.png` | `screenshots/output/detail-desktop-output.png` |
+| detail | tablet | `screenshots/source/detail-tablet-source.png` | `screenshots/output/detail-tablet-output.png` |
+| detail | mobile | `screenshots/source/detail-mobile-source.png` | `screenshots/output/detail-mobile-output.png` |
 | demo | desktop | `screenshots/source/demo-desktop-source.png` | `screenshots/output/demo-desktop-output.png` |
 | demo | tablet | `screenshots/source/demo-tablet-source.png` | `screenshots/output/demo-tablet-output.png` |
 | demo | mobile | `screenshots/source/demo-mobile-source.png` | `screenshots/output/demo-mobile-output.png` |
