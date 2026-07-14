@@ -1,0 +1,41 @@
+---
+import globalStyles from "../styles/global.css?inline";
+import inter300 from "@fontsource/inter/latin-300.css?inline";
+import inter400 from "@fontsource/inter/latin-400.css?inline";
+import inter500 from "@fontsource/inter/latin-500.css?inline";
+import inter600 from "@fontsource/inter/latin-600.css?inline";
+import inter700 from "@fontsource/inter/latin-700.css?inline";
+import poppins300 from "@fontsource/poppins/latin-300.css?inline";
+import poppins400 from "@fontsource/poppins/latin-400.css?inline";
+import poppins500 from "@fontsource/poppins/latin-500.css?inline";
+import poppins600 from "@fontsource/poppins/latin-600.css?inline";
+import poppins700 from "@fontsource/poppins/latin-700.css?inline";
+import poppins700Url from "@fontsource/poppins/files/poppins-latin-700-normal.woff2?url";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const criticalStyles = [globalStyles, inter300, inter400, inter500, inter600, inter700, poppins300, poppins400, poppins500, poppins600, poppins700].join("\n");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f9e930" />
+    <link rel="icon" type="image/png" href="/images/lumen-tidy/brand/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/images/lumen-tidy/brand/favicon.png" />
+    <link rel="preload" href={poppins700Url} as="font" type="font/woff2" crossorigin />
+    <style is:inline set:html={criticalStyles}></style>
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <script is:inline src="/scripts/source-interactions.js"></script>
+  </body>
+</html>

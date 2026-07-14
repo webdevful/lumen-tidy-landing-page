@@ -1,0 +1,73 @@
+{
+  "slug": "lumen-tidy",
+  "sourceUrl": "https://tidex.webflow.io/",
+  "sourceLabel": "Tidex (Webflow hosted template)",
+  "sourceCapture": "/Volumes/WDF-NAS-01/04-Projects/Internal-Projects/Codebases/worktrees/lumen-tidy-order-7/captures/tidex-webflow-io/desktop",
+  "design_tokens": {
+    "fonts": { "heading": "Poppins, sans-serif", "body": "Inter, sans-serif" },
+    "colors": { "paper": "#ffffff", "ink": "#0c0c0c", "accent": "#0b68fe", "secondary": "#f9e930", "muted": "#f9f9f9", "footer": "#222222" },
+    "radii": { "small": "10px", "large": "20px", "pill": "50px" }
+  },
+  "sections": [
+    "sticky-navbar",
+    "centered-split-image-hero",
+    "three-image-proof-row",
+    "about-results-yellow-band",
+    "four-alternating-service-cards",
+    "six-person-team-grid",
+    "testimonial-slider-yellow-band",
+    "contact-image-and-form",
+    "dark-company-footer"
+  ],
+  "visual_slots": {
+    "hero": { "family": "photography", "count": 5, "replacement": "Pexels API downloads", "local": true },
+    "about": { "family": "photography", "count": 2, "replacement": "Pexels API downloads", "local": true },
+    "services": { "family": "photography", "count": 4, "replacement": "Pexels API downloads", "local": true },
+    "team": { "family": "photography", "count": 6, "replacement": "Pexels API downloads", "local": true },
+    "contact": { "family": "photography", "count": 1, "replacement": "Pexels API download", "local": true },
+    "identity": { "family": "WLFS logo/favicon", "count": 7, "local": true },
+    "icons": { "family": "typographic/runtime controls", "count": 8, "sourceTemplateAssetsShipped": false }
+  },
+  "typography_scale": {
+    "h1": "60px source desktop, fluid clamp to 39px mobile",
+    "h2": "42px source desktop, fluid clamp to 32px mobile",
+    "h3": "32px source desktop, fluid clamp to 20px mobile",
+    "body": "16px",
+    "medium": "18px",
+    "button": "16px"
+  },
+  "interactions": [
+    "750ms navbar entrance",
+    "responsive mobile menu",
+    "scroll reveal from bottom left and right",
+    "service and hero image hover zoom",
+    "five-slide testimonial carousel with previous next and autoplay",
+    "contact form success state",
+    "smooth-scroll anchors"
+  ],
+  "sliderChecks": [
+    {
+      "selector": "[data-slider]",
+      "sourceLibrary": "Webflow Slider",
+      "implementation": "native JavaScript",
+      "slideCount": 5,
+      "slidesPerViewDesktop": 1,
+      "slidesPerViewMobile": 1,
+      "arrows": true,
+      "autoplay": true,
+      "keyboardReachable": true
+    }
+  ],
+  "assetPolicy": {
+    "logo": "WLFS identity slots only",
+    "photos": "local Pexels API JPEG downloads with adjacent provenance JSON",
+    "sourceTemplateAssetsShipped": false,
+    "remoteMediaShipped": false
+  },
+  "footer_requirements": {
+    "businessBranding": true,
+    "copyrightAndLegal": true,
+    "poweredByWebdevful": true,
+    "exactSignature": "Powered by WebDevful"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "generated_from": "tools/scaffold_lpl_source_port.py",
+  "generated_at": "2026-07-14T04:00:57+00:00",
+  "capture_dir": "/Volumes/WDF-NAS-01/04-Projects/Internal-Projects/Codebases/worktrees/lumen-tidy-order-7/captures/tidex-webflow-io/desktop",
+  "obligations": {
+    "local_media": "every shipped image/video is a local owned/licensed/API-downloaded file \u2014 no remote hot-links",
+    "original_copy": "all prose rewritten as original Webdevful product copy (qa:lpl-original-content)",
+    "wlfs_identity": "WLFS logo + favicon wired locally in the shipped page",
+    "authored_interactions": "6 decoded IX2 action list(s) reimplemented natively; no WDF-BUILD-TODO markers remain"
+  },
+  "source_flags": {
+    "sliders": true,
+    "video": false,
+    "detected_libraries": [],
+    "detected_animations": [
+      "CSS Keyframes Animation",
+      "CSS Transitions and Delays"
+    ]
+  }
+}

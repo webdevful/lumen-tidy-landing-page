@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const services = [
+  { title: "A Home That Feels Reset", text: "A dependable room-by-room clean for busy weeks, special weekends, or the moment your space needs breathing room.", price: "$89", image: "/images/lumen-tidy/service-routine.jpg", alt: "Two cleaning professionals refreshing a modern living room" },
+  { title: "The Deep-Clean Difference", text: "Detailed attention for kitchens, bathrooms, bedrooms, and the often-missed places where dust settles in.", price: "$169", image: "/images/lumen-tidy/service-deep.jpg", alt: "Housekeepers preparing a bright bedroom" },
+  { title: "Move With Less Stress", text: "A careful clean before the boxes arrive or after the last key turns, so every transition begins on a fresh note.", price: "$219", image: "/images/lumen-tidy/service-move.jpg", alt: "Cleaning team unloading professional equipment" },
+  { title: "Workspaces Ready for Work", text: "Flexible office care that keeps shared rooms polished, comfortable, and ready for clients and teams.", price: "$149", image: "/images/lumen-tidy/service-office.jpg", alt: "Professional cleaning crew caring for a shared workspace" },
+];
+
+const team = [
+  { name: "Maya Brooks", role: "Home Care Lead", note: "Known for calm arrivals and a sharp eye for finishing details.", image: "/images/lumen-tidy/team-1.jpg" },
+  { name: "Elena Cruz", role: "Quality Coordinator", note: "Keeps every checklist consistent from first room to final walk-through.", image: "/images/lumen-tidy/team-2.jpg" },
+  { name: "Nina Patel", role: "Deep-Clean Specialist", note: "Takes on high-detail resets with thoughtful, surface-safe methods.", image: "/images/lumen-tidy/team-3.jpg" },
+  { name: "Marcus Reed", role: "Commercial Care Lead", note: "Plans efficient routines that respect working hours and busy teams.", image: "/images/lumen-tidy/team-4.jpg" },
+  { name: "Sofia Lane", role: "Client Care Manager", note: "Makes scheduling simple and turns special requests into clear plans.", image: "/images/lumen-tidy/team-5.jpg" },
+  { name: "Noah Bennett", role: "Move Service Lead", note: "Brings order and steady pacing to move-in and move-out days.", image: "/images/lumen-tidy/team-6.jpg" },
+];
+
+const testimonials = [
+  { quote: "Lumen Tidy made the whole house feel lighter. The team was thoughtful, punctual, and incredibly thorough without disrupting our day.", name: "Amelia R.", service: "Recurring Home Care" },
+  { quote: "Our move-out clean was the easiest part of moving. Every room was ready for inspection, and communication stayed clear throughout.", name: "Jordan M.", service: "Move-Out Cleaning" },
+  { quote: "The office looks polished every Monday morning. They work around our schedule and never miss the small details clients notice.", name: "Priya K.", service: "Office Care" },
+  { quote: "I booked a deep clean before family arrived and the result was excellent. Even the hard-to-reach areas looked refreshed.", name: "Daniel S.", service: "Deep Cleaning" },
+  { quote: "Friendly people, a simple quote, and a spotless finish. I finally found a cleaning team I can confidently book again.", name: "Camila T.", service: "One-Time Home Care" },
+];
+---
+
+<BaseLayout title="Lumen Tidy | Thoughtful Cleaning for Home and Work" description="Reliable residential and commercial cleaning with flexible plans, careful teams, and simple online quotes.">
+  <Header />
+  <main>
+    <section id="home" class="hero section-pad">
+      <div class="hero-copy">
+        <p class="eyebrow">Bright spaces. Lighter days.</p>
+        <h1>Come Home to Clean Without Giving Up Your Day.</h1>
+        <p>Reliable, detail-minded cleaning for homes and workplaces—planned around your routine and finished with care.</p>
+        <div class="button-row">
+          <a class="button" href="#contact-us">Plan your cleaning <span aria-hidden="true">→</span></a>
+          <a class="button button-outline" href="#services">Explore services</a>
+        </div>
+      </div>
+      <div class="hero-collage" aria-label="Lumen Tidy cleaning professionals">
+        <figure class="hero-image hero-image-left reveal reveal-left"><img src="/images/lumen-tidy/hero-1.jpg" alt="Cleaning professional wiping a kitchen surface" width="1000" height="1000" /></figure>
+        <figure class="hero-image hero-image-right reveal reveal-right"><img src="/images/lumen-tidy/hero-2.jpg" alt="Cleaning professional dusting a home" width="1000" height="1000" /></figure>
+        <figure class="hero-proof proof-one reveal reveal-up"><img src="/images/lumen-tidy/hero-3.jpg" alt="Professional cleaner refreshing a kitchen" width="1000" height="800" /></figure>
+        <figure class="hero-proof proof-two reveal reveal-up"><img src="/images/lumen-tidy/hero-4.jpg" alt="Professional cleaner vacuuming a living room" width="1000" height="800" /></figure>
+        <figure class="hero-proof proof-three reveal reveal-up"><img src="/images/lumen-tidy/hero-5.jpg" alt="Uniformed cleaning professional ready for work" width="1000" height="800" /></figure>
+      </div>
+    </section>
+
+    <section id="about-us" class="about section-pad yellow-band">
+      <div class="section-shell">
+        <div class="about-heading reveal reveal-up">
+          <div><p class="eyebrow eyebrow-dark">About Lumen Tidy</p><h2>Careful Cleaning for Healthier, Happier Spaces</h2></div>
+          <div class="stats"><div><strong>4.9/5</strong><span>Average rating</span></div><div><strong>100%</strong><span>Care guarantee</span></div></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-small reveal reveal-left"><img src="/images/lumen-tidy/about-detail.jpg" alt="Robot vacuum supporting a detailed clean" width="1000" height="1000" /></div>
+          <div class="about-copy reveal reveal-up"><p>We combine trained people, practical checklists, and surface-safe products to give every room a consistent finish. Choose a one-time reset or a routine that keeps life moving.</p><a class="text-link" href="#contact-us">Build my cleaning plan →</a></div>
+          <div class="about-large reveal reveal-right"><img src="/images/lumen-tidy/about-team.jpg" alt="Lumen Tidy cleaning team" width="1400" height="1000" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services section-pad">
+      <div class="section-shell">
+        <header class="section-heading centered reveal reveal-up"><p class="eyebrow">What we do</p><h2>Cleaning Services Made to Fit Real Life</h2><p>Clear plans, thoughtful professionals, and the right level of care for every kind of space.</p></header>
+        <div class="service-list">
+          {services.map((service, index) => (
+            <article class:list={["service-card", { reverse: index % 2 === 1 }, "reveal", index % 2 === 1 ? "reveal-right" : "reveal-left"]}>
+              <div class="service-media"><img src={service.image} alt={service.alt} width="1200" height="900" loading="eager" /></div>
+              <div class="service-copy"><div><div class="service-title"><h3>{service.title}</h3><strong>{service.price}</strong></div><p>{service.text}</p></div><a class="button button-small" href="#contact-us">Request this service <span>→</span></a></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="team section-pad gray-band">
+      <div class="section-shell">
+        <header class="section-heading centered reveal reveal-up"><p class="eyebrow">Our people</p><h2>Meet the Team Behind the Details</h2><p>Friendly, trained professionals who arrive prepared and treat every space with respect.</p></header>
+        <div class="team-grid">
+          {team.map((member) => (
+            <article class="team-card reveal reveal-up">
+              <img src={member.image} alt={`${member.name}, ${member.role}`} width="800" height="900" loading="eager" />
+              <h3>{member.name}</h3><strong>{member.role}</strong><p>{member.note}</p>
+              <div class="member-links" aria-label={`${member.name} social links`}><span>in</span><span>◎</span><span>✦</span></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section-pad yellow-band">
+      <div class="section-shell testimonial-grid">
+        <div class="testimonial-intro reveal reveal-left"><p class="eyebrow eyebrow-dark">Client notes</p><h2>Why Clients Make Us Part of Their Routine</h2><p>Reliable timing, careful work, and a finish that feels immediately different.</p><div class="rating-row"><span class="avatar-dots">● ● ●</span><strong>4.9 from local clients</strong></div></div>
+        <div class="testimonial-slider reveal reveal-right" data-slider>
+          {testimonials.map((item, index) => (
+            <article class:list={["testimonial-slide", { active: index === 0 }]} data-slide aria-hidden={index === 0 ? "false" : "true"}>
+              <span class="quote-mark">“</span><blockquote>{item.quote}</blockquote><div><strong>{item.name}</strong><span>{item.service}</span></div>
+            </article>
+          ))}
+          <div class="slider-controls"><button type="button" data-prev aria-label="Previous testimonial">←</button><span data-slide-count>1 / {testimonials.length}</span><button type="button" data-next aria-label="Next testimonial">→</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-us" class="contact section-pad">
+      <div class="section-shell">
+        <div class="contact-heading reveal reveal-up"><div><p class="eyebrow">Contact us</p><h2>Tell Us What You’d Like to Feel Clean Again</h2><p>Share your space, timing, and priorities. We’ll reply with a straightforward plan.</p></div><div class="contact-facts"><div><span>Call for a quote</span><a href="tel:+15550142890">+1 (555) 014-2890</a></div><div><span>Service area</span><strong>Homes and workplaces across the metro area</strong></div></div></div>
+        <div class="contact-panel reveal reveal-up">
+          <img src="/images/lumen-tidy/contact.jpg" alt="Lumen Tidy professional cleaning team" width="1600" height="1000" loading="eager" />
+          <form class="quote-form" data-quote-form>
+            <div class="field-row"><label>Name<input name="name" type="text" required autocomplete="name" /></label><label>Service<select name="service" required><option value="">Choose a service</option><option>Routine home care</option><option>Deep cleaning</option><option>Move cleaning</option><option>Office care</option></select></label></div>
+            <label>Email<input name="email" type="email" required autocomplete="email" /></label>
+            <label>What should we know?<textarea name="message" rows="5" placeholder="Rooms, timing, priorities, or special requests" required></textarea></label>
+            <button class="button" type="submit">Request my cleaning plan</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
