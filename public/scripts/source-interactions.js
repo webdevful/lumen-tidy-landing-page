@@ -43,29 +43,16 @@
       reveals.forEach((item) => observer.observe(item));
     }
 
-    const initWebflowSliders = () => {
-      document.querySelectorAll("[data-slider]").forEach((slider) => {
-        const slides = [...slider.querySelectorAll("[data-slide]")];
-        const count = slider.querySelector("[data-slide-count]");
-        let current = 0;
-        const show = (next) => {
-          current = (next + slides.length) % slides.length;
-          slides.forEach((slide, index) => {
-            const active = index === current;
-            slide.classList.toggle("active", active);
-            slide.setAttribute("aria-hidden", String(!active));
-          });
-          if (count) count.textContent = `${current + 1} / ${slides.length}`;
-        };
-        slider.querySelector("[data-prev]")?.addEventListener("click", () => show(current - 1));
-        slider.querySelector("[data-next]")?.addEventListener("click", () => show(current + 1));
-        let timer = window.setInterval(() => show(current + 1), 6500);
-        slider.addEventListener("mouseenter", () => window.clearInterval(timer));
-        slider.addEventListener("mouseleave", () => { timer = window.setInterval(() => show(current + 1), 6500); });
-        show(0);
+    const lazyBackgrounds = document.querySelectorAll("[data-lazy-bg]");
+    const loadBackgrounds = () => {
+      if (window.scrollY < 600) return;
+      lazyBackgrounds.forEach((target) => {
+        target.style.backgroundImage = `url("${target.dataset.lazyBg}")`;
       });
+      window.removeEventListener("scroll", loadBackgrounds);
     };
-    initWebflowSliders();
+    window.addEventListener("scroll", loadBackgrounds, { passive: true });
+    loadBackgrounds();
 
     document.querySelector("[data-quote-form]")?.addEventListener("submit", (event) => {
       event.preventDefault();

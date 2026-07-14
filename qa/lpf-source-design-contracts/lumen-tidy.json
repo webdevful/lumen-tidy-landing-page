@@ -49,13 +49,25 @@
     {
       "selector": "[data-slider]",
       "sourceLibrary": "Webflow Slider",
-      "implementation": "native JavaScript",
+      "implementation": "Swiper 12",
       "slideCount": 5,
       "slidesPerViewDesktop": 1,
       "slidesPerViewMobile": 1,
       "arrows": true,
       "autoplay": true,
       "keyboardReachable": true
+    }
+  ],
+  "logoStripChecks": [
+    {
+      "selector": ".brand-link",
+      "sourceCount": 2,
+      "finalCount": 2,
+      "sourceGeometry": "business identity in the header and footer; no third-party proof-logo strip",
+      "finalTreatment": "WLFS Lumen Tidy identity in the same two business-brand slots",
+      "requiredPackage": "WLFS canonical generator output",
+      "forbidWlfsOutput": false,
+      "forbidWorkerAuthoredMarks": true
     }
   ],
   "assetPolicy": {
