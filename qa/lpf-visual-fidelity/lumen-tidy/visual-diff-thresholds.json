@@ -1,5 +1,7 @@
 {
-  "_reason": "Per-slug calibration for a source-faithful identity/media adaptation. The live Tidex tablet capture expands its alternating slider/team layout to 13,818px with large source-authored whitespace, while the Lumen Tidy implementation preserves every topology block in a compact 9,767px responsive composition. Approved local Pexels media also changes the global luminance profile from yellow/blue uniforms to the product's red/yellow palette. Human inspection confirms the same hero collage, yellow proof band, alternating services, six-person team, testimonial slider, contact form, and dark footer at all three breakpoints; the source-structure contract independently matches all eight top-level sections.",
-  "ssim_floor": 0.13,
-  "height_ratio_min": 0.65
+  "_reason": "The 2026-07-14 full-fidelity return rejects the former unsafe relaxation. Lumen Tidy must pass the canonical factory floors and strict per-section enforcement.",
+  "ssim_floor": 0.3,
+  "height_ratio_min": 0.8,
+  "height_ratio_max": 1.25,
+  "strict_sections": true
 }

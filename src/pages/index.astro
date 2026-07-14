@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ProviderIcon from "../components/ProviderIcon.astro";
 import "swiper/css";
 
 const services = [
@@ -32,47 +33,53 @@ const testimonials = [
 <BaseLayout title="Lumen Tidy | Thoughtful Cleaning for Home and Work" description="Reliable residential and commercial cleaning with flexible plans, careful teams, and simple online quotes.">
   <Header />
   <main>
-    <section id="home" class="hero section-pad">
-      <div class="hero-copy">
-        <p class="eyebrow">Bright spaces. Lighter days.</p>
-        <h1>Come Home to Clean Without Giving Up Your Day.</h1>
-        <p>Reliable, detail-minded cleaning for homes and workplaces—planned around your routine and finished with care.</p>
-        <div class="button-row">
-          <a class="button" href="#contact-us">Plan your cleaning <span aria-hidden="true">→</span></a>
-          <a class="button button-outline" href="#services">Explore services</a>
+    <header id="home" class="section-header">
+      <div class="header-component" data-hero-scroll>
+        <div class="header-inner-wrapper">
+          <div class="header-content">
+            <h1>A Cleaner Space Without Losing Your Day.</h1>
+            <p>Reliable, detail-minded cleaning for homes and workplaces—planned around your routine and finished with care.</p>
+            <div class="button-row">
+              <a class="button" href="#contact-us">Plan your cleaning <ProviderIcon name="arrow-right" /></a>
+              <a class="button button-outline" href="#services">Explore services</a>
+            </div>
+          </div>
+          <div class="header-images-wrapper" aria-label="Lumen Tidy cleaning professionals">
+            <figure class="header-image-wrapper is-image1"><img src="/images/lumen-tidy/hero-1.jpg" alt="Cleaning professional wiping a kitchen surface" width="1000" height="1000" /></figure>
+            <figure class="header-image-wrapper is-image2"><img src="/images/lumen-tidy/hero-2.jpg" alt="Cleaning professional dusting a home" width="1000" height="1000" /></figure>
+            <figure class="header-image-wrapper is-image3"><img src="/images/lumen-tidy/hero-3.jpg" alt="Professional cleaner refreshing a kitchen" width="1000" height="1000" /></figure>
+            <figure class="header-image-wrapper is-image4"><img src="/images/lumen-tidy/hero-4.jpg" alt="Professional cleaner vacuuming a living room" width="1000" height="1000" /></figure>
+            <figure class="header-image-wrapper is-image5"><img src="/images/lumen-tidy/hero-5.jpg" alt="Uniformed cleaning professional ready for work" width="1000" height="1000" /></figure>
+          </div>
         </div>
+        <div class="header-trigger" aria-hidden="true"></div>
       </div>
-      <div class="hero-collage" aria-label="Lumen Tidy cleaning professionals">
-        <figure class="hero-image hero-image-left reveal reveal-left"><img src="/images/lumen-tidy/hero-1.jpg" alt="Cleaning professional wiping a kitchen surface" width="1000" height="1000" /></figure>
-        <figure class="hero-image hero-image-right reveal reveal-right"><img src="/images/lumen-tidy/hero-2.jpg" alt="Cleaning professional dusting a home" width="1000" height="1000" /></figure>
-        <figure class="hero-proof proof-one reveal reveal-up"><img src="/images/lumen-tidy/hero-3.jpg" alt="Professional cleaner refreshing a kitchen" width="1000" height="800" /></figure>
-        <figure class="hero-proof proof-two reveal reveal-up"><img src="/images/lumen-tidy/hero-4.jpg" alt="Professional cleaner vacuuming a living room" width="1000" height="800" /></figure>
-        <figure class="hero-proof proof-three reveal reveal-up"><img src="/images/lumen-tidy/hero-5.jpg" alt="Uniformed cleaning professional ready for work" width="1000" height="800" /></figure>
-      </div>
-    </section>
+    </header>
 
     <section id="about-us" class="about section-pad yellow-band">
       <div class="section-shell">
         <div class="about-heading reveal reveal-up">
-          <div><p class="eyebrow eyebrow-dark">About Lumen Tidy</p><h2>Careful Cleaning for Healthier, Happier Spaces</h2></div>
+          <div><p class="eyebrow eyebrow-dark"><ProviderIcon name="star" />About Lumen Tidy</p><h2>Cleaner, Healthier Spaces</h2></div>
           <div class="stats"><div><strong>4.9/5</strong><span>Average rating</span></div><div><strong>100%</strong><span>Care guarantee</span></div></div>
         </div>
         <div class="about-grid">
-          <div class="about-small reveal reveal-left"><img src="/images/lumen-tidy/about-detail.jpg" alt="Robot vacuum supporting a detailed clean" width="1000" height="1000" loading="lazy" /></div>
-          <div class="about-copy reveal reveal-up"><p>We combine trained people, practical checklists, and surface-safe products to give every room a consistent finish. Choose a one-time reset or a routine that keeps life moving.</p><a class="text-link" href="#contact-us">Build my cleaning plan →</a></div>
-          <div class="about-large reveal reveal-right" role="img" aria-label="Lumen Tidy cleaning team" data-lazy-bg="/images/lumen-tidy/about-team.jpg"></div>
+          <div class="about-content-left">
+            <div class="about-small reveal reveal-left"><img src="/images/lumen-tidy/about-detail.jpg" alt="Robot vacuum supporting a detailed clean" width="1000" height="1000" loading="lazy" /></div>
+            <div class="about-copy reveal reveal-up"><p>We combine trained people, practical checklists, and surface-safe products to give every room a consistent finish. Choose a one-time reset or a routine that keeps life moving.</p><a class="button button-outline" href="#contact-us">Build my cleaning plan</a></div>
+          </div>
+          <div class="about-large reveal reveal-right"><img src="/images/lumen-tidy/about-team.jpg" alt="Lumen Tidy cleaning team" width="1390" height="1390" loading="lazy" /></div>
         </div>
       </div>
     </section>
 
     <section id="services" class="services section-pad">
       <div class="section-shell">
-        <header class="section-heading centered reveal reveal-up"><p class="eyebrow">What we do</p><h2>Cleaning Services Made to Fit Real Life</h2><p>Clear plans, thoughtful professionals, and the right level of care for every kind of space.</p></header>
+        <header class="section-heading centered reveal reveal-up"><p class="eyebrow"><ProviderIcon name="star" />What we do</p><h2>Cleaning Services Made to Fit Real Life</h2><p>Clear plans, thoughtful professionals, and the right level of care for every kind of space.</p></header>
         <div class="service-list">
           {services.map((service, index) => (
             <article class:list={["service-card", { reverse: index % 2 === 1 }, "reveal", index % 2 === 1 ? "reveal-right" : "reveal-left"]}>
               <div class="service-media"><img src={service.image} alt={service.alt} width="1200" height="900" loading="lazy" /></div>
-              <div class="service-copy"><div><div class="service-title"><h3>{service.title}</h3><strong>{service.price}</strong></div><p>{service.text}</p></div><a class="button button-small" href="#contact-us">Request this service <span>→</span></a></div>
+              <div class="service-copy"><div><div class="service-title"><h3>{service.title}</h3><strong>{service.price}</strong></div><p>{service.text}</p></div><a class="button button-small" href="#contact-us">Request this service <ProviderIcon name="arrow-right" /></a></div>
             </article>
           ))}
         </div>
@@ -81,13 +88,17 @@ const testimonials = [
 
     <section id="team" class="team section-pad gray-band">
       <div class="section-shell">
-        <header class="section-heading centered reveal reveal-up"><p class="eyebrow">Our people</p><h2>Meet the Team Behind the Details</h2><p>Friendly, trained professionals who arrive prepared and treat every space with respect.</p></header>
+        <header class="team-header reveal reveal-up"><p class="eyebrow"><ProviderIcon name="star" />Our people</p><h2>Meet the Team Behind the Details</h2><p>Friendly, trained professionals who arrive prepared and treat every space with respect.</p></header>
         <div class="team-grid">
-          {team.map((member) => (
-            <article class="team-card reveal reveal-up">
+          {team.map((member, index) => (
+            <article class:list={["team-card", { "item-padding": [1, 2, 5].includes(index) }, "reveal", "reveal-up"]}>
               <img src={member.image} alt={`${member.name}, ${member.role}`} width="800" height="900" loading="lazy" />
               <h3>{member.name}</h3><strong>{member.role}</strong><p>{member.note}</p>
-              <div class="member-links" aria-label={`${member.name} social links`}><span>in</span><span>◎</span><span>✦</span></div>
+              <div class="member-links" aria-label={`${member.name} social links`}>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label={`${member.name} on LinkedIn`}><ProviderIcon name="linkedin" /></a>
+                <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label={`${member.name} on X`}><ProviderIcon name="x" /></a>
+                <a href="https://dribbble.com/" target="_blank" rel="noreferrer" aria-label={`${member.name} on Dribbble`}><ProviderIcon name="dribbble" /></a>
+              </div>
             </article>
           ))}
         </div>
@@ -96,7 +107,7 @@ const testimonials = [
 
     <section id="testimonials" class="testimonials section-pad yellow-band">
       <div class="section-shell testimonial-grid">
-        <div class="testimonial-intro reveal reveal-left"><p class="eyebrow eyebrow-dark">Client notes</p><h2>Why Clients Make Us Part of Their Routine</h2><p>Reliable timing, careful work, and a finish that feels immediately different.</p><div class="rating-row"><span class="avatar-dots">● ● ●</span><strong>4.9 from local clients</strong></div></div>
+        <div class="testimonial-intro reveal reveal-left"><p class="eyebrow eyebrow-dark"><ProviderIcon name="star" />Client notes</p><h2>Why Clients Make Us Part of Their Routine</h2><p>Reliable timing, careful work, and a finish that feels immediately different.</p><div class="client-stack" aria-label="Five Lumen Tidy clients">{[1, 2, 3, 4, 5].map((index) => <img src={`/images/lumen-tidy/team-${index}.jpg`} alt="" width="52" height="52" loading="lazy" />)}</div></div>
         <div class="testimonial-slider swiper reveal reveal-right" data-slider>
           <div class="swiper-wrapper">
             {testimonials.map((item, index) => (
@@ -105,7 +116,7 @@ const testimonials = [
               </article>
             ))}
           </div>
-          <div class="slider-controls"><button type="button" data-prev aria-label="Previous testimonial">←</button><span data-slide-count>1 / {testimonials.length}</span><button type="button" data-next aria-label="Next testimonial">→</button></div>
+          <div class="slider-controls"><button type="button" data-prev aria-label="Previous testimonial"><ProviderIcon name="arrow-left" /></button><button type="button" data-next aria-label="Next testimonial"><ProviderIcon name="arrow-right" /></button></div>
           <div class="swiper-pagination" role="group" aria-label="Choose testimonial"></div>
         </div>
       </div>
@@ -113,7 +124,7 @@ const testimonials = [
 
     <section id="contact-us" class="contact section-pad">
       <div class="section-shell">
-        <div class="contact-heading reveal reveal-up"><div><p class="eyebrow">Contact us</p><h2>Tell Us What You’d Like to Feel Clean Again</h2><p>Share your space, timing, and priorities. We’ll reply with a straightforward plan.</p></div><div class="contact-facts"><div><span>Call for a quote</span><a href="tel:+15550142890">+1 (555) 014-2890</a></div><div><span>Service area</span><strong>Homes and workplaces across the metro area</strong></div></div></div>
+        <div class="contact-heading reveal reveal-up"><div><p class="eyebrow"><ProviderIcon name="star" />Contact us</p><h2>Ready for a Cleaner Space?</h2><p>Share your space, timing, and priorities. We’ll reply with a straightforward plan.</p></div><div class="contact-facts"><div><span>Call for a quote</span><a href="tel:+15550142890">+1 (555) 014-2890</a></div><div><span>Service area</span><strong>Homes and workplaces across the metro area</strong></div></div></div>
         <div class="contact-panel reveal reveal-up">
           <img src="/images/lumen-tidy/contact.jpg" alt="Lumen Tidy professional cleaning team" width="1600" height="1000" loading="lazy" />
           <form class="quote-form" data-quote-form>
@@ -130,31 +141,21 @@ const testimonials = [
   <Footer />
   <script>
     import Swiper from "swiper";
-    import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
+    import { Keyboard, Navigation, Pagination } from "swiper/modules";
 
     const sliderElement = document.querySelector<HTMLElement>("[data-slider]");
-    const countElement = sliderElement?.querySelector<HTMLElement>("[data-slide-count]");
     if (sliderElement) {
       const testimonialSlider = new Swiper(sliderElement, {
-        modules: [Autoplay, Keyboard, Navigation, Pagination],
+        modules: [Keyboard, Navigation, Pagination],
         slidesPerView: 1,
         speed: 420,
         loop: false,
-        autoplay: { delay: 6500, disableOnInteraction: false, pauseOnMouseEnter: true },
         keyboard: { enabled: true },
         navigation: {
           prevEl: sliderElement.querySelector<HTMLElement>("[data-prev]"),
           nextEl: sliderElement.querySelector<HTMLElement>("[data-next]"),
         },
         pagination: { el: sliderElement.querySelector<HTMLElement>(".swiper-pagination"), clickable: true },
-        on: {
-          init(instance) {
-            if (countElement) countElement.textContent = `${instance.realIndex + 1} / ${instance.slides.length}`;
-          },
-          slideChange(instance) {
-            if (countElement) countElement.textContent = `${instance.realIndex + 1} / ${instance.slides.length}`;
-          },
-        },
       });
       window.addEventListener("pagehide", () => testimonialSlider.destroy(), { once: true });
     }

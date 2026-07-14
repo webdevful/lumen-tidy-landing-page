@@ -1,17 +1,20 @@
-<header class="site-header" data-navbar>
-  <div class="nav-shell">
+<header class="navbar-component" data-navbar>
+  <div class="navbar-container">
     <a class="brand-link" href="#home" aria-label="Lumen Tidy home">
-      <img src="/images/lumen-tidy/brand/logo.png" alt="Lumen Tidy" width="300" height="70" />
+      <img src="/images/lumen-tidy/brand/favicon.png" alt="" width="512" height="512" />
+      <span>Lumen Tidy</span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
-      <span></span><span></span><span></span><span class="sr-only">Open menu</span>
-    </button>
     <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation" data-menu>
       <a href="#home">Home</a>
       <a href="#about-us">About us</a>
       <a href="#services">Services</a>
       <a href="#testimonials">Testimonials</a>
     </nav>
-    <a class="button button-small nav-cta" href="#contact-us">Get a quote</a>
+    <div class="navbar-actions">
+      <a class="button nav-cta" href="#contact-us">Get a quote</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
+        <span></span><span></span><span></span><span class="sr-only">Open menu</span>
+      </button>
+    </div>
   </div>
 </header>

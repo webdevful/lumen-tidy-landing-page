@@ -5,6 +5,47 @@
     const header = document.querySelector("[data-navbar]");
     requestAnimationFrame(() => header?.classList.add("is-ready"));
 
+    const hero = document.querySelector("[data-hero-scroll]");
+    const heroImages = hero?.querySelector(".header-images-wrapper");
+    const heroContent = hero?.querySelector(".header-content");
+    const heroCards = hero ? [...hero.querySelectorAll(".header-image-wrapper")] : [];
+    const desktopVectors = [
+      [45, 110],
+      [30, 80],
+      [0, 70],
+      [-30, 90],
+      [-45, 120],
+    ];
+    const mobileVectors = [
+      [50, 40],
+      [35, 20],
+      [0, 5],
+      [-35, 25],
+      [-45, 45],
+    ];
+    const syncHeroScroll = () => {
+      if (!hero || !heroImages) return;
+      const distance = Math.max(hero.offsetHeight, 1);
+      const progress = Math.min(Math.max(-hero.getBoundingClientRect().top / distance, 0), 1);
+      const mobile = window.innerWidth <= 700;
+      const end = mobile ? .7 : .58;
+      const phase = Math.min(progress / end, 1);
+      const vectors = mobile ? mobileVectors : desktopVectors;
+      heroImages.style.transform = `translateY(${phase * 5}%) scale(${1 - phase})`;
+      heroImages.style.opacity = String(1 - phase);
+      heroCards.forEach((card, index) => {
+        const [x, y] = vectors[index] || [0, 0];
+        card.style.transform = `translate(${x * phase}vw, ${y * phase}%)`;
+      });
+      if (heroContent) {
+        const contentPhase = mobile ? Math.min(Math.max((progress - .15) / .55, 0), 1) : 0;
+        heroContent.style.transform = `translateY(${contentPhase * 8}rem)`;
+      }
+    };
+    window.addEventListener("scroll", syncHeroScroll, { passive: true });
+    window.addEventListener("resize", syncHeroScroll);
+    syncHeroScroll();
+
     const toggle = document.querySelector("[data-menu-toggle]");
     const menu = document.querySelector("[data-menu]");
     const closeMenu = () => {
@@ -26,15 +67,6 @@
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const direction = entry.target.classList.contains("reveal-left")
-              ? "translateX(-8px)"
-              : entry.target.classList.contains("reveal-right")
-                ? "translateX(8px)"
-                : "translateY(8px)";
-            entry.target.animate(
-              [{ transform: direction, filter: "saturate(.85)" }, { transform: "translate(0)", filter: "saturate(1)" }],
-              { duration: 180, easing: "cubic-bezier(.23,1,.32,1)" }
-            );
             entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
           }

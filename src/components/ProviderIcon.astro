@@ -1,0 +1,31 @@
+---
+import { icon, type IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import {
+  faDribbble,
+  faFacebookF,
+  faInstagram,
+  faLinkedinIn,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faArrowLeft, faArrowRight, faStar } from "@fortawesome/free-solid-svg-icons";
+
+const icons = {
+  "arrow-left": faArrowLeft,
+  "arrow-right": faArrowRight,
+  dribbble: faDribbble,
+  facebook: faFacebookF,
+  instagram: faInstagram,
+  linkedin: faLinkedinIn,
+  star: faStar,
+  x: faXTwitter,
+} satisfies Record<string, IconDefinition>;
+
+interface Props {
+  name: keyof typeof icons;
+}
+
+const { name } = Astro.props;
+const svg = icon(icons[name]).html.join("");
+---
+
+<span class="provider-icon" aria-hidden="true" set:html={svg}></span>

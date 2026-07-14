@@ -1,0 +1,114 @@
+{
+  "capturedAt": "2026-07-14",
+  "renderedUrl": "http://127.0.0.1:4327/",
+  "sourceContract": "/Volumes/WDF-NAS-01/04-Projects/Internal-Projects/Codebases/webdevful-astro-main/captures/tidex-webflow-io/desktop/WEBFLOW-INTERACTIONS.json",
+  "browser": "Playwright Chromium",
+  "reveal": {
+    "before": { "visible": false, "opacity": 0, "translateY": 100 },
+    "after1000ms": { "visible": true, "opacity": 1, "translateY": 0 }
+  },
+  "heroDesktop": {
+    "top": { "scale": 1, "opacity": 1 },
+    "mid": { "scale": 0.500547, "opacity": 0.500547 },
+    "end": {
+      "scale": 0,
+      "opacity": 0,
+      "cardVectors": [[45, 110], [30, 80], [0, 70], [-30, 90], [-45, 120]]
+    }
+  },
+  "heroMobile": {
+    "end": {
+      "scale": 0,
+      "opacity": 0,
+      "contentTranslateRem": 8,
+      "cardVectors": [[50, 40], [35, 20], [0, 5], [-35, 25], [-45, 45]]
+    }
+  },
+  "services": {
+    "desktop1440": {
+      "computedPosition": "sticky",
+      "computedTop": "135px",
+      "scrollSamples": [
+        { "scrollY": 2411, "firstCardTop": 397, "secondCardTop": 1162 },
+        { "scrollY": 2911, "firstCardTop": 135, "secondCardTop": 662 },
+        { "scrollY": 3511, "firstCardTop": 135, "secondCardTop": 162 }
+      ]
+    },
+    "tablet768": {
+      "computedPosition": "sticky",
+      "computedTop": "135px",
+      "scrollSamples": [
+        { "scrollY": 2375, "firstCardTop": 366, "secondCardTop": 1131 },
+        { "scrollY": 2875, "firstCardTop": 135, "secondCardTop": 631 },
+        { "scrollY": 3475, "firstCardTop": 135, "secondCardTop": 162 }
+      ]
+    },
+    "mobile390": {
+      "computedPosition": "static",
+      "computedTop": "auto",
+      "scrollSamples": [
+        { "scrollY": 2339, "firstCardTop": 367, "secondCardTop": 1011 },
+        { "scrollY": 2839, "firstCardTop": -133, "secondCardTop": 511 },
+        { "scrollY": 3439, "firstCardTop": -733, "secondCardTop": -89 }
+      ]
+    }
+  },
+  "team": {
+    "desktop1440": {
+      "computedPosition": "sticky",
+      "computedTop": "450px",
+      "settledScrollSamples": [
+        { "scrollY": 5980, "headerTop": 450, "headerBottom": 680 },
+        { "scrollY": 6480, "headerTop": 450, "headerBottom": 680 },
+        { "scrollY": 6980, "headerTop": 450, "headerBottom": 680 },
+        { "scrollY": 7480, "headerTop": 450, "headerBottom": 680 }
+      ]
+    },
+    "tablet768": {
+      "computedPosition": "sticky",
+      "computedTop": "450px",
+      "settledScrollSamples": [
+        { "scrollY": 5897, "headerTop": 450, "headerBottom": 673 },
+        { "scrollY": 6397, "headerTop": 450, "headerBottom": 673 },
+        { "scrollY": 6897, "headerTop": 450, "headerBottom": 673 },
+        { "scrollY": 7397, "headerTop": 450, "headerBottom": 673 }
+      ]
+    },
+    "mobile390": {
+      "computedPosition": "static",
+      "scrollSamples": [
+        { "scrollY": 5446, "headerTop": 16 },
+        { "scrollY": 5946, "headerTop": -484 },
+        { "scrollY": 6646, "headerTop": -1184 }
+      ]
+    }
+  },
+  "mobileMenu": {
+    "open": { "ariaExpanded": true, "menuOpen": true, "bodyLocked": true },
+    "closedByNavigation": { "ariaExpanded": false, "menuOpen": false, "bodyLocked": false }
+  },
+  "testimonialSlider": {
+    "sourceAutoplayAttribute": false,
+    "sourceVisibleCounter": false,
+    "sourceVisiblePagination": false,
+    "initialIndex": 0,
+    "afterNextIndex": 1,
+    "afterPrevIndex": 0,
+    "afterKeyboardRightIndex": 1,
+    "afterKeyboardLeftIndex": 0,
+    "afterMobileSwipeIndex": 1,
+    "after4300msWithoutInputIndex": 0
+  },
+  "sourceRoleProof": {
+    "clientPortraitStackCount": 5,
+    "teamProviderIconLinkCount": 18,
+    "footerProviderIconLinkCount": 4,
+    "providerSvgCount": 34,
+    "visibleSlideCounter": false,
+    "h2Computed": { "fontSize": "42px", "fontWeight": "500", "lineHeight": "50.4px" },
+    "h3Computed": { "fontWeight": "500", "lineHeight": "34.56px" }
+  },
+  "buttonHover": { "movesUp": true, "darkens": true, "insetShadow": true },
+  "formStatus": "Thanks — your cleaning request is ready. We’ll be in touch shortly.",
+  "verdict": "PASS"
+}

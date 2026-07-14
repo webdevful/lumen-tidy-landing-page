@@ -2,7 +2,7 @@
   "slug": "lumen-tidy",
   "sourceUrl": "https://tidex.webflow.io/",
   "sourceLabel": "Tidex (Webflow hosted template)",
-  "sourceCapture": "/Volumes/WDF-NAS-01/04-Projects/Internal-Projects/Codebases/worktrees/lumen-tidy-order-7/captures/tidex-webflow-io/desktop",
+  "sourceCapture": "/Volumes/WDF-NAS-01/04-Projects/Internal-Projects/Codebases/webdevful-astro-main/captures/tidex-webflow-io/desktop",
   "design_tokens": {
     "fonts": { "heading": "Poppins, sans-serif", "body": "Inter, sans-serif" },
     "colors": { "paper": "#ffffff", "ink": "#0c0c0c", "accent": "#0b68fe", "secondary": "#f9e930", "muted": "#f9f9f9", "footer": "#222222" },
@@ -26,7 +26,7 @@
     "team": { "family": "photography", "count": 6, "replacement": "Pexels API downloads", "local": true },
     "contact": { "family": "photography", "count": 1, "replacement": "Pexels API download", "local": true },
     "identity": { "family": "WLFS logo/favicon", "count": 7, "local": true },
-    "icons": { "family": "typographic/runtime controls", "count": 8, "sourceTemplateAssetsShipped": false }
+    "icons": { "family": "provider-backed interface and social icons", "count": 34, "replacement": "Font Awesome Free Brands/Solid", "sourceTemplateAssetsShipped": false }
   },
   "typography_scale": {
     "h1": "60px source desktop, fluid clamp to 39px mobile",
@@ -40,8 +40,7 @@
     "750ms navbar entrance",
     "responsive mobile menu",
     "scroll reveal from bottom left and right",
-    "service and hero image hover zoom",
-    "five-slide testimonial carousel with previous next and autoplay",
+    "five-slide testimonial carousel with previous, next, dot, keyboard, and swipe controls",
     "contact form success state",
     "smooth-scroll anchors"
   ],
@@ -54,7 +53,7 @@
       "slidesPerViewDesktop": 1,
       "slidesPerViewMobile": 1,
       "arrows": true,
-      "autoplay": true,
+      "autoplay": false,
       "keyboardReachable": true
     }
   ],
@@ -74,6 +73,7 @@
     "logo": "WLFS identity slots only",
     "photos": "local Pexels API JPEG downloads with adjacent provenance JSON",
     "sourceTemplateAssetsShipped": false,
+    "icons": "Font Awesome Free Brands/Solid packages mapped to source social, arrow, and tagline roles",
     "remoteMediaShipped": false
   },
   "footer_requirements": {

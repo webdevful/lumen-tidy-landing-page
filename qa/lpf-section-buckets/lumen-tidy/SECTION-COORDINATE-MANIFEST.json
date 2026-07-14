@@ -1,0 +1,21 @@
+{
+  "capturedAt": "2026-07-14",
+  "captureMethod": "Playwright Chromium, 1000px viewport height, source/output pages fully walked to load lazy media and settle Webflow-responsive layout before DOM measurement",
+  "sourceUrl": "https://tidex.webflow.io/",
+  "outputUrl": "http://127.0.0.1:4327/",
+  "breakpoints": {
+    "desktop1440": {
+      "source": { "home": [0, 1400], "about": [1400, 1151], "services": [2551, 3909], "team": [6460, 2365], "testimonials": [8825, 642], "contact": [9467, 1640], "footer": [11107, 536], "documentHeight": 11643 },
+      "output": { "home": [0, 1400], "about": [1400, 1151], "services": [2551, 3909], "team": [6460, 2366], "testimonials": [8826, 642], "contact": [9468, 1640], "footer": [11108, 536], "documentHeight": 11644 }
+    },
+    "tablet768": {
+      "source": { "home": [0, 1400], "about": [1400, 1114], "services": [2514, 3862], "team": [6376, 4290], "testimonials": [10665, 919], "contact": [11584, 1332], "footer": [12916, 784], "documentHeight": 13700 },
+      "output": { "home": [0, 1400], "about": [1400, 1115], "services": [2515, 3862], "team": [6377, 4290], "testimonials": [10667, 919], "contact": [11586, 1331], "footer": [12917, 784], "documentHeight": 13701 }
+    },
+    "mobile390": {
+      "source": { "home": [0, 1100], "about": [1100, 1348], "services": [2448, 3108], "team": [5556, 3757], "testimonials": [9313, 976], "contact": [10289, 1301], "footer": [11590, 930], "documentHeight": 12520 },
+      "output": { "home": [0, 1100], "about": [1100, 1348], "services": [2448, 3107], "team": [5555, 3757], "testimonials": [9312, 976], "contact": [10288, 1301], "footer": [11589, 930], "documentHeight": 12519 }
+    }
+  },
+  "verdict": "PASS — every section remains in its corresponding source band; cumulative document-height delta is 1px desktop, 1px tablet, and 1px mobile."
+}

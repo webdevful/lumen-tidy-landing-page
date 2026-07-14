@@ -1,15 +1,20 @@
+---
+import ProviderIcon from "./ProviderIcon.astro";
+---
+
 <footer class="site-footer">
   <div class="footer-shell">
     <div class="footer-brand">
       <a class="brand-link footer-logo" href="#home" aria-label="Lumen Tidy home">
-        <img src="/images/lumen-tidy/brand/logo_white.png" alt="Lumen Tidy" width="300" height="70" />
+        <img src="/images/lumen-tidy/brand/favicon.png" alt="" width="512" height="512" />
+        <span>Lumen Tidy</span>
       </a>
       <p>Thoughtful cleaning for homes and workplaces that need reliable care without the fuss.</p>
       <div class="socials" aria-label="Social links">
-        <a href="#contact-us" aria-label="Facebook">f</a>
-        <a href="#contact-us" aria-label="Instagram">◎</a>
-        <a href="#contact-us" aria-label="X">x</a>
-        <a href="#contact-us" aria-label="LinkedIn">in</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><ProviderIcon name="facebook" /></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><ProviderIcon name="instagram" /></a>
+        <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X"><ProviderIcon name="x" /></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><ProviderIcon name="linkedin" /></a>
       </div>
     </div>
     <div class="footer-links">
