@@ -1,9 +1,17 @@
 # Lumen Tidy Visual Fidelity Acceptance
 
-Date: 2026-07-14
+Date: 2026-07-16
 Builder: Codex UI Repair Specialist / LPF whole-job lane
 Reviewer: Codex independent vision judge / lumen_tidy_vision_judge
 Verdict: PASS
+
+2026-07-16 owner-return addendum: the header and coupled footer identity now
+render the approved WLFS `web | Lumen Tidy` lockups instead of composing visible
+branding from square favicon assets. The demo output pairs were recaptured with
+the canonical viewport-stitching tool at 1440 x 11644, 768 x 13701, and
+390 x 12519. Strict visual diff passed all three pairs, and the independent
+`lumen_tidy_header_judge` re-judged all 9 route/breakpoint pairs and every
+section as pass after rejecting the first non-canonical capture attempt.
 
 ## Evidence Table
 
