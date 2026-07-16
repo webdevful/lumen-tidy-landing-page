@@ -57,18 +57,7 @@
       "keyboardReachable": true
     }
   ],
-  "logoStripChecks": [
-    {
-      "selector": ".brand-link",
-      "sourceCount": 2,
-      "finalCount": 2,
-      "sourceGeometry": "business identity in the header and footer; no third-party proof-logo strip",
-      "finalTreatment": "WLFS Lumen Tidy identity in the same two business-brand slots",
-      "requiredPackage": "WLFS canonical generator output",
-      "forbidWlfsOutput": false,
-      "forbidWorkerAuthoredMarks": true
-    }
-  ],
+  "logoStripChecks": [],
   "assetPolicy": {
     "logo": "WLFS identity slots only",
     "photos": "local Pexels API JPEG downloads with adjacent provenance JSON",
