@@ -3,6 +3,10 @@
 Date: 2026-07-16
 Builder verdict: PASS — owner-return repair
 
+Owner return round 2: the first repair restored the correct logo but missed the
+source capsule outline. The navigation pill now carries the source-visible
+`1px solid var(--line)` border at every breakpoint.
+
 Evidence: `original.png`, failed `current-after.png`, and
 `current-after-logo-repair-20260716-{desktop,tablet,mobile}.png`.
 

@@ -44,7 +44,7 @@ p { margin: 0; }
 
 .navbar-component { position: fixed; z-index: 50; top: 0; display: flex; width: 100%; min-height: 72px; align-items: center; padding: 1% 5% 0; transform: translateY(-140px); opacity: 0; pointer-events: none; }
 .navbar-component.is-ready { transition: transform 750ms ease, opacity 500ms ease; transform: translateY(0); opacity: 1; pointer-events: auto; }
-.navbar-container { display: flex; width: min(100%, var(--container)); min-height: 72px; align-items: center; justify-content: space-between; margin-inline: auto; padding: 10px; border-radius: 80px; background: var(--paper); box-shadow: 0 8px 32px rgb(12 12 12 / 5%); }
+.navbar-container { display: flex; width: min(100%, var(--container)); min-height: 72px; align-items: center; justify-content: space-between; margin-inline: auto; padding: 10px; border: 1px solid var(--line); border-radius: 80px; background: var(--paper); box-shadow: 0 8px 32px rgb(12 12 12 / 5%); }
 .brand-link { display: inline-flex; width: fit-content; align-items: center; color: var(--ink); line-height: 1; }
 .brand-link img { width: 160px; height: auto; object-fit: contain; }
 .primary-nav { display: flex; align-items: center; font-size: 1rem; font-weight: 400; }
